@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   
+    <title>Ask her out</title>
+    <style>
+        @font-face {
+            font-family: 'Playwrite DE Grund';
+            src: url('path/to/PlaywriteDEGrund.ttf') format('truetype'); /* Update with the correct path to the font file */
+        }
+        
+        body {
+            background-color: #F0F8FF;
+            margin: 0;
+            font-family:'Playwrite DE Grund', cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .text-container {
+            text-align: center;
+        }
+
+        .header_text {
+            color: 	#48363A;
+            font-size: 30px;
+            margin-top: 55px; /* Default margin for larger screens */
+        }
+
+        .gif_container {
+            margin-top: 20px;
+        }
+
+        .gif_container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #yesButton {
+            position: static; /* Keep the "Yes" button static */
+        }
+
+        @media (max-width: 768px) {
+            .header_text {
+                margin-top: 20rem; /* Adjust margin for smaller screens */
+            }
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="text-container" style="border: 20px solid rgb(180, 100, 128); border-radius: 50px; padding: 20px; color: rgb(255, 255, 255); background-color: #ffc0cb;">
+            <p class="header_text" style="text-align: center;">
+                My Dear Motu 💕,</p>
+                <p class="header_text" style="text-align: justify;">
+                Happy six-month anniversary! Since the moment we met at the food court, there has been an indescribable connection between us. There's something so enchanting about recalling the night we met. From the moment I saw your beautiful face, beautiful smile and felt the warmth of your kind heart, my world was forever changed. Every day since has been a wonderful journey of getting to know you better and felling in love with you more and more.
+
+
+                Over the past six months, you have filled my life with immense happiness and love. Your laughter brings me so much joy, and being with you brings me a sense of peace and contentment. I feel so blessed to have you by my side, sharing moments big and small, creating memories that I'll cherish forever.
+
+
+                Thank you for being the most amazing person you are, for loving me, and for making every day brighter. I would like to spend more months, and years of love, laughter, and happiness with you. Will you be my one?
+
+                <br>
+                <p class="header_text" style="text-align: center;">
+                With all of my affection,<br><br>
+                Your Puchuu  </p>
+            </p>
+        </div>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+        
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script> 
+</body> 
+</html>
